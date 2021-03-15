@@ -1,6 +1,26 @@
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
+document.querySelector("#generate").addEventListener("click", writePassword);
 
+// creating arrays for the special characters so i dont have to manually type each code, i can just convert the ASII code to the actual character
+const UPPERCASE_CHAR = arrayFromLowToHigh(65, 90)
+const LOWERCASE_CHAR = arrayFromLowToHigh(97, 122)
+const NUMBERS_CHAR = arrayFromLowToHigh(48, 57)
+const SYMBOLS_CHAR = arrayFromLowToHigh(33, 47).concat(
+  arrayFromLowToHigh(58, 64)
+).concat(
+  arrayFromLowToHigh(91, 96)
+).concat(
+  arrayFromLowToHigh(123, 126)
+)
+
+// my array loop which counts from low number to high number (from a range) to gather the expected values for each character code set
+function arrayFromLowToHigh(low, high) {
+  const array = []
+  for (let i = low; i <= high; i++) {
+    array.push(i)
+  }
+  return array
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
