@@ -13,31 +13,31 @@ const SYMBOLS_CHAR = arrayFromLowToHigh(33, 47).concat(
   arrayFromLowToHigh(123, 126)
 )
 
-const lengthCheck = "";
-const uppercaseCheck;
-const lowercaseCheck;
-const numbersCheck;
-const symbolsCheck;
+var lengthCheck = "";
+var uppercaseCheck;
+var lowercaseCheck;
+var numbersCheck;
+var symbolsCheck;
 
 function generatePassword() {
-  const LengthCheck = (window.promt("How many characters would you like your password to be (from 8 to 128) 📏"));
+  var lengthCheck = (window.prompt("How many characters would you like your password to be (from 8 to 128) 📏"));
 
   while(lengthCheck <= 7 || lengthCheck >= 129) {
-    window.alert("😞 Password length must be between 8-128 characters. Please try again!")
-    const LengthCheck = (window.promt("How many characters would you like your password to be (from 8 to 128) 📏"));
+    alert("😞 Password length must be between 8-128 characters. Please try again!")
+    var lengthCheck = (prompt("How many characters would you like your password to be (from 8 to 128) 📏"));
   }
 
-  const uppercaseCheck = window.confirm("Would you like uppercase characters in your password? 🔠");
-  const lowercaseCheck = window.confirm("Would you like lowercase characters in your password? 🔡");
-  const numbersCheck = window.confirm("Would you like numbers in your password? 🔢");
-  const symbolsCheck = window.confirm("Would you like symbols in your password? 🔣");
+  var uppercaseCheck = confirm("Would you like uppercase characters in your password? 🔠");
+  var lowercaseCheck = confirm("Would you like lowercase characters in your password? 🔡");
+  var numbersCheck = confirm("Would you like numbers in your password? 🔢");
+  var symbolsCheck = confirm("Would you like symbols in your password? 🔣");
 
   while(uppercaseCheck === false && lowercaseCheck === false && numbersCheck === false && symbolsCheck === false) {
     window.alert("You must atlease include one of the options to generate a password 💢")
-    const uppercaseCheck = window.confirm("Would you like uppercase characters in your password? 🔠");
-    const lowercaseCheck = window.confirm("Would you like lowercase characters in your password? 🔡");
-    const numbersCheck = window.confirm("Would you like numbers in your password? 🔢");
-    const symbolsCheck = window.confirm("Would you like symbols in your password? 🔣");
+    var uppercaseCheck = confirm("Would you like uppercase characters in your password? 🔠");
+    var lowercaseCheck = confirm("Would you like lowercase characters in your password? 🔡");
+    var numbersCheck = confirm("Would you like numbers in your password? 🔢");
+    var symbolsCheck = confirm("Would you like symbols in your password? 🔣");
   }
   
   let charPass = [];
@@ -46,11 +46,13 @@ function generatePassword() {
   if (numbersCheck) charPass = charPass.concat(NUMBERS_CHAR)
   if (symbolsCheck) charPass = charPass.concat(SYMBOLS_CHAR)
 
+  const passwordCharacters = []
+  for (let i = 0; i < lengthCheck; i++) {
+    const characterCode = charPass[Math.floor(Math.random() * charPass.length)]
+    passwordCharacters.push(String.fromCharCode(characterCode))
+  }
 
-
-
-
-
+  return passwordCharacters.join('')
 }
 
 
@@ -62,9 +64,6 @@ function arrayFromLowToHigh(low, high) {
   }
   return array
 }
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
 
 
 // Write password to the #password input
