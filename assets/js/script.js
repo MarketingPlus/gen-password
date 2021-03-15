@@ -40,6 +40,11 @@ function generatePassword() {
     const symbolsCheck = window.confirm("Would you like symbols in your password? 🔣");
   }
   
+  let charPass = [];
+  if (uppercaseCheck) charPass = charPass.concat(UPPERCASE_CHAR)
+  if (lowercaseCheck) charPass = charPass.concat(LOWERCASE_CHAR)
+  if (numbersCheck) charPass = charPass.concat(NUMBERS_CHAR)
+  if (symbolsCheck) charPass = charPass.concat(SYMBOLS_CHAR)
 
 
 
