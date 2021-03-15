@@ -34,6 +34,10 @@ function generatePassword() {
 
   while(uppercaseCheck === false && lowercaseCheck === false && numbersCheck === false && symbolsCheck === false) {
     window.alert("You must atlease include one of the options to generate a password 💢")
+    const uppercaseCheck = window.confirm("Would you like uppercase characters in your password? 🔠");
+    const lowercaseCheck = window.confirm("Would you like lowercase characters in your password? 🔡");
+    const numbersCheck = window.confirm("Would you like numbers in your password? 🔢");
+    const symbolsCheck = window.confirm("Would you like symbols in your password? 🔣");
   }
   
 
