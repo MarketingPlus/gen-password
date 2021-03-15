@@ -19,6 +19,15 @@ const lowercaseCheck;
 const numbersCheck;
 const symbolsCheck;
 
+function generatePassword() {
+  const LengthCheck = (promt("How many characters would you like your password to be (from 8 to 128) 📏"));
+
+  while(lengthCheck <= 7 || lengthCheck >= 129) {
+    window.alert("😞 Password length must be between 8-128 characters. Please try again!")
+  }
+
+}
+
 
 // my array loop which counts from low number to high number (from a range) to gather the expected values for each character code set
 function arrayFromLowToHigh(low, high) {
