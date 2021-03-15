@@ -4,20 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- TAB TITLE -->
     <title>Password Generator | Benjamin Wilson</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- ICONS I USED FOR MY WEBSITE -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- FAVICON LINK -->
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
   </head>
+
   <body>
+    <!-- CONTAINER -->
     <div class="wrapper">
+      <!-- HEADER -->
       <header>
         <h1>Password Generator</h1>
       </header>
+      <!-- CARD -->
       <div class="card">
         <div class="card-header">
+          <!-- TITLE -->
           <h2>Generate a Password</h2>
         </div>
         <div class="card-body">
+          <!-- TEXTAREA -->
           <textarea
             readonly
             id="password"
@@ -25,8 +35,13 @@
             aria-label="Generated Password"
           ></textarea>
         </div>
+
+        <!-- FOOTER -->
         <div class="card-footer">
+
+          <!-- GENERATE BUTTON -->
           <button id="generate" class="btn">Generate Password</button>
+          <!-- COPY TO CLIPBOARD BUTTON -->
           <i class='bx bx-clipboard bx-lg' id="clipboard"></i>
         </div>
       </div>
