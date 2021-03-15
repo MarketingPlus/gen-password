@@ -64,6 +64,7 @@ header {
   width: 100%;
   background: #e7e9eb;
   height: 2px;
+  align-content: center;
 }
 
 .card-footer::after {
@@ -86,6 +87,23 @@ header {
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
+}
+
+i {
+border: none;
+background-color: hsl(360, 91%, 36%);
+border-radius: 25px;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+  0px;
+color: hsl(0, 0%, 100%);
+display: flex;
+align-items: center;
+flex-direction: row;
+font-size: 22px;
+line-height: 22px;
+margin: 16px 16px 16px 20px;
+padding: 14px 34px;
+cursor: pointer;
 }
 
 button[disabled] {
