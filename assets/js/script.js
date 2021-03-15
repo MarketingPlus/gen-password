@@ -13,6 +13,13 @@ const SYMBOLS_CHAR = arrayFromLowToHigh(33, 47).concat(
   arrayFromLowToHigh(123, 126)
 )
 
+const lengthCheck = "";
+const uppercaseCheck;
+const lowercaseCheck;
+const numbersCheck;
+const symbolsCheck;
+
+
 // my array loop which counts from low number to high number (from a range) to gather the expected values for each character code set
 function arrayFromLowToHigh(low, high) {
   const array = []
