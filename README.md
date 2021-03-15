@@ -12,6 +12,15 @@ I have also developed a second password generator, however this time the user ha
 > NOTE: Here is a screenshot of the functionallity of my password generator
 ![SCREENSHOT](https://user-images.githubusercontent.com/77607177/111131798-b6b3ee80-85cc-11eb-8b4d-4a02876199ff.PNG)
 
+## FEATURES ⚔️
+
+The features of this project include the following:
+
+- A prompt box when the users click the generate button, which allows users to input the length of their desired password
+- Multiple comfirm boxes which gives the user an option to include uppercase, lowercase, numbers or symbols
+- Completely unique and never seen before password which follows the users criteria
+- Copy to clipboard button which allows users just to click the clipboard button and the password is ready to use
+- Error detection which makes sure users input a value from 8-128 characters, and users actually atleast select one input type
 
 ## REPOSITARY 📁
 
