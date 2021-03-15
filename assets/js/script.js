@@ -1,6 +1,22 @@
 // Assignment Code
 document.querySelector("#generate").addEventListener("click", writePassword);
 
+// assigns the clipboard var to the html document
+const clipboard = document.getElementById("clipboard")
+
+// copy to clipboard function
+clipboard.addEventListener('click', e => {
+  // varible to be able to select the password and perform a command on it
+  const textOutput = document.getElementById('password')
+
+    // command to select the password and copy it to te clipboard
+    textOutput.select();
+    document.execCommand('copy');
+    // an alert box allowing the individual to be notified when the password has been copied
+    window.alert("You have successfully copied your UNIQUE password to your clipboard 📋") 
+  
+})
+
 // creating arrays for the special characters so i dont have to manually type each code, i can just convert the ASII code to the actual character
 const UPPERCASE_CHAR = arrayFromLowToHigh(65, 90)
 const LOWERCASE_CHAR = arrayFromLowToHigh(97, 122)
